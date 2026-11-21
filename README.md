@@ -1,7 +1,5 @@
 This is a support code for the paper "Simple ordinary geometrically split abelian varieties over finite fields".
 
-[TOC]
-
 # Requirements
 * Sage 10.6
 
