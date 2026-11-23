@@ -7,7 +7,7 @@ This is a support code for the paper "Simple ordinary geometrically split abelia
 Clone this repository or download it as ZIP archive and run the examples below.
 
 ## Enumeration of geometrically split abelian varieties
-To print a list of possible cases for simple ordinary geometrically split abelian varieties run:
+To print a list of possible cases of simple ordinary geometrically split abelian varieties run:
 ```sh
 sage av_gsplit_enum.sage [dimension]
 ```
@@ -92,7 +92,7 @@ Characteristic polynomials from the table:
 ```
 
 ## Explicit characteristic polynomials for primitive groups
-There is also a script that computes the characteristic polynomials for any primitive group V_v(B) or the abelian variety W_{w,1}(V_v(B)):
+There is also a script that computes characteristic polynomials for any primitive group V_v(B) or the abelian variety W_{w,1}(V_v(B)):
 ```sh
 sage av_gsplit_charpoly.sage -v [v] -w [w] [dimension]
 ```
@@ -108,7 +108,7 @@ sage av_gsplit_charpoly.sage -v 5 2
 
 ## Searching for examples of geometrically split abelian varieties
 ### Enumeration of Jacobians
-The script `examples/jacobians_enum` tries to find examples geometrically split abelian varieties by curves enumeration. In case of dim B = 1 it enumerates all elliptic curves upto isomorphism, for higher dimension it takes random curves (hyperelliptic by default).
+The script `examples/jacobians_enum` tries to find examples of geometrically split abelian varieties by curves enumeration. In case of dim B = 1 it enumerates all elliptic curves upto isomorphism, for higher dimension it takes random curves (hyperelliptic by default).
 
 Usage:
 ```
