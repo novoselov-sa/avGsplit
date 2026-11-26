@@ -1,13 +1,13 @@
-This is a support code for the paper "Simple ordinary geometrically split abelian varieties over finite fields".
+This repository contains supporting code for the paper "[Simple ordinary geometrically split abelian varieties over finite fields](https://arxiv.org/abs/2611.33638)". 
 
 # Requirements
 * Sage 10.6
 
 # How to use
-Clone this repository or download it as ZIP archive and run the examples below.
+Clone this repository or download it as a ZIP archive and run the commands shown below.
 
 ## Enumeration of geometrically split abelian varieties
-To print a list of possible cases of simple ordinary geometrically split abelian varieties run:
+To list all possible cases of simple ordinary geometrically split abelian varieties run:
 ```sh
 sage av_gsplit_enum.sage [dimension]
 ```
@@ -16,7 +16,7 @@ For example, if you run:
 sage av_gsplit_enum.sage 4
 ```
 
-The script will output a short table for dimension 4:
+The script outputs a short table for dimension 4:
 ```
   d    A                         A/F_{q^d}   e   g_B   chi_A,q(T)                       conditions
 ├────┼─────────────────────────┼───────────┼───┼─────┼────────────────────────────────┼────────────────────┤
@@ -37,7 +37,7 @@ To see information about the abelian variety A over all subfields add `--subfiel
 sage av_gsplit_enum.sage 4 --subfields
 ```
 
-The script will output the table with subfields in conditions:
+The script outputs a table that also includes information about the subfields in the conditions column:
 ```
   d    A                         A/F_{q^d}   e   g_B   chi_A,q(T)                       conditions
 ├────┼─────────────────────────┼───────────┼───┼─────┼────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
@@ -53,7 +53,7 @@ The script will output the table with subfields in conditions:
 ```
 
 ## Explicit characteristic polynomials for the table
-To compute characteristic polynomials for the table above use `--frobs` flag:
+To compute the characteristic polynomials listed in the table above, use `--frobs` flag:
 ```sh
 sage av_gsplit_enum.sage 4 --frobs
 ```
@@ -92,12 +92,12 @@ Characteristic polynomials from the table:
 ```
 
 ## Explicit characteristic polynomials for primitive groups
-There is also a script that computes characteristic polynomials for any primitive group V_v(B) or the abelian variety W_{w,1}(V_v(B)):
+There is also a script that computes characteristic polynomials for an arbitrary primitive group V_v(B) or the abelian variety W_{w,1}(V_v(B)):
 ```sh
 sage av_gsplit_charpoly.sage -v [v] -w [w] [dimension]
 ```
 
-For example the following command computes chi_{V_5(B),q}(T) for dim B = 2.
+For example, the following command computes chi_{V_5(B),q}(T) for dim B = 2.
 ```sh
 sage av_gsplit_charpoly.sage -v 5 2
 ```
@@ -108,7 +108,7 @@ sage av_gsplit_charpoly.sage -v 5 2
 
 ## Searching for examples of geometrically split abelian varieties
 ### Enumeration of Jacobians
-The script `examples/jacobians_enum` tries to find examples of geometrically split abelian varieties by curves enumeration. In case of dim B = 1 it enumerates all elliptic curves upto isomorphism, for higher dimension it takes random curves (hyperelliptic by default).
+The script `examples/jacobians_enum` searches for examples of geometrically split abelian varieties by curves enumeration. When dim B = 1 it enumerates all elliptic curves up to isomorphism, in higher dimension it takes random curves (hyperelliptic by default).
 
 Usage:
 ```
